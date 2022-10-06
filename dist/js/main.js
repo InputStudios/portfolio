@@ -212,7 +212,7 @@ function scrollUp(){
 	if(this.scrollY > 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
 }
 
-/*======================== DARK LIGHT THEME========================*/
+/*======================== DARK LIGHT THEME ========================*/
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
 const iconTheme = 'uil-sun'
@@ -241,3 +241,35 @@ themeButton.addEventListener('click', () => {
 	localStorage.setItem('selected-theme', getCurrentTheme())
 	localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+/*======================== LANGUAGE SWITCHING MODE ========================*/
+const select = document.querySelector('select');
+const allLang = ['en', 'ru'];
+
+select.addEventListener('change', changeURLLanguage);
+
+// Redirect url to language
+function changeURLLanguage() {
+	let lang = select.value;
+	location.href = window.location.pathname + '#' + lang;
+	location.reload();
+}
+
+function changeLanguage() {
+	let hash = window.location.hash;
+	hash = hash.slice(1);
+	console.log(hash);
+	if(!allLang.includes(hash)) {
+		location.href = window.location.pathname + '#en';
+		location.reload();
+	}
+	select.value = hash;
+	//document.querySelector('.nav__item').innerHTML = langArr['nav__item'][hash];
+	for (let key in langArr) {
+		let elem = document.querySelector('.lng-'+ key);
+		if(elem) {
+			elem.innerHTML = langArr[key][hash];
+		}
+	}
+}
+changeLanguage();

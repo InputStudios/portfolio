@@ -21,44 +21,49 @@
 		<!--===================== HEADER =====================-->
 		<header class="header" id="header">
 			<nav class="nav container">
-				<a href="#" class="nav__logo">Andrey</a>
+				<a href="#" class="lng-nav__logo">Andrey</a>
 
 				<div class="nav__menu" id="nav-menu">
 					<ul class="nav__list grid">
-						<li class="nav__item">
+						<li class="lng-nav__item">
 							<a href="#home" class="nav__link active-link">
 								<i class="uil uil-estate nav__icon"></i> Home
 							</a>
 						</li>
-						<li class="nav__item">
+						<li class="lng-nav__item">
 							<a href="#about" class="nav__link">
 								<i class="uil uil-user nav__icon"></i> About
 							</a>
 						</li>
-						<li class="nav__item">
+						<li class="lng-nav__item">
 							<a href="#skills" class="nav__link">
 								<i class="uil uil-file-alt nav__icon"></i> Skills
 							</a>
 						</li>
-						<li class="nav__item">
+						<li class="lng-nav__item">
 							<a href="#services" class="nav__link">
 								<i class="uil uil-briefcase-alt nav__icon"></i> Services
 							</a>
 						</li>
-						<li class="nav__item">
+						<li class="lng-nav__item">
 							<a href="#portfolio" class="nav__link"> 
 								<i class="uil uil-scenery nav__icon"></i> Portfolio
 							</a>
 						</li>
-						<li class="nav__item">
+						<li class="lng-nav__item">
 							<a href="#contact" class="nav__link">
 								<i class="uil uil-message nav__icon"></i> Contactme
 							</a>
 						</li>
+					</select>
 					</ul>
 					<i class="uil uil-times nav__close" id="nav-close"></i>
 				</div>
-
+				<!-- Language Selection -->
+				<select class="change-lang">
+					<option value="ru" selected>RU</option>
+					<option value="en">EN</option>
+				</select>
 				<div class="nav__btns">
 					<!-- Theme change button -->
 					<i class="uil uil-moon change-theme" id="theme-button"></i>
@@ -897,21 +902,20 @@
 									</div>
 								</div>
 							</div>
-
 							<div class="contact__content">
 								<form action="" class="contact__form">
 									<div class="input__container">
-										<input type="text" class="input">
+										<input type="text" name="login" class="input">
 										<label for="">Username</label>
 										<span>Username</span>
 									</div>
 									<div class="input__container">
-										<input type="email" class="input">
+										<input type="email" name="email" class="input">
 										<label for="">Email</label>
 										<span>Email</span>
 									</div>
 									<div class="input__container">
-										<input type="tel" class="input">
+										<input type="tel" name="tel" class="input">
 										<label for="">Phone</label>
 										<span>Phone</span>
 									</div>
@@ -973,9 +977,6 @@
 		<!--===================== MIXTUP FILTER =====================-->
 		<script src="./js/mixitup.min.js"></script>
 
-		<!--===================== THEME =====================-->
-
-
 		<!--===================== SCROLL UP =====================-->
 		<a href="#" class="scrollup" id="scroll-up">
 			<i class="uil uil-arrow-up scrollup__icon"></i>
@@ -986,5 +987,8 @@
 
 		<!--===================== MAIN JS =====================-->
 		<script src="./js/main.js"></script>
+
+		<!--===================== LANGUAGE SELECTION =====================-->
+		<script src="./js/lang.js"></script>
 	</body>
 </html>
