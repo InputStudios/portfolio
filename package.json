@@ -1,0 +1,15 @@
+{
+	"name": "developer",
+	"version": "1.0.0",
+	"description": "",
+	"homepage": "https://inputgames.github.io/portfolio",
+	"scripts": {
+		"deploy": "gh-pages -d dist"
+	},
+	"keyword": [],
+	"author": "Input Studios",
+	"license": "ISC",
+	"devDependencies": {
+		"gh-pages": "^4.0.0"
+	}
+}
