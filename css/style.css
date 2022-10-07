@@ -136,6 +136,7 @@ ul{
 
 a{
 	text-decoration: none;
+	color: var(--title-color);
 }
 
 img{
