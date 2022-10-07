@@ -905,21 +905,40 @@
 								</div>
 							</div>
 
+							<!--==================== CONTACT FORM ====================-->
 							<div class="contact__content">
-								<form action="./form/send.php" method="post" class="contact__form">
+								<form action="#" id="form" name="form" class="contact__form">
 									<div class="input__container">
-										<input type="text" name="login" class="input">
-										<label for="">Username</label>
+										<input 
+											type="text" 
+											class="input" 
+											id="name" 
+											name="name" 
+											data-reg="^[A-ЯЁ][а-яё]*$"
+										/>
+										<label for="name">Username</label>
 										<span>Username</span>
 									</div>
 									<div class="input__container">
-										<input type="email" name="email" class="input">
-										<label for="">Email</label>
+										<input 
+											type="email" 
+											class="input"
+											id="email"
+											name="email"
+											data-reg="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$"
+										/>
+										<label for="email">Email</label>
 										<span>Email</span>
 									</div>
 									<div class="input__container">
-										<input type="tel" name="tel" class="input">
-										<label for="">Phone</label>
+										<input 
+											type="text" 
+											class="input"
+											id="tel"
+											name="tel"
+											data-reg="^((\+7|7|8+([0-9]){10})$"
+										/>
+										<label for="tel">Phone</label>
 										<span>Phone</span>
 									</div>
 									<div class="input__container textarea">
@@ -937,7 +956,7 @@
 						</div>
 					</h2>
 				</section>
-
+				
 				<!--===================== FOOTER =====================-->
 				<footer class="footer">
 					<div class="footer__bg">
