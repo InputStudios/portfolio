@@ -58,6 +58,12 @@
 					</ul>
 					<i class="uil uil-times nav__close" id="nav-close"></i>
 				</div>
+				
+					<!-- Language Selection -->
+					<select class="change-lang">
+						<option value="ru" selected>RU</option>
+						<option value="en">EN</option>
+					</select>
 
 				<div class="nav__btns">
 					<!-- Theme change button -->
@@ -862,7 +868,6 @@
 				<section class="contact section" id="contact">
 					<h2 class="section__title">Contact Me</h2>
 						<span class="section__subtitle">Get in touch</span>
-
 						<div class="contact__container container grid">
 							<div class="contact__content">
 								<div class="contact__information">
@@ -897,22 +902,42 @@
 									</div>
 								</div>
 							</div>
-
+							
+							<!--==================== CONTACT FORM ====================-->
 							<div class="contact__content">
-								<form action="send.php" method="post" class="contact__form">
+								<form action="#" id="form" name="form" class="contact__form">
 									<div class="input__container">
-										<input type="text" class="input">
-										<label for="">Username</label>
+										<input 
+											type="text" 
+											class="input" 
+											id="name" 
+											name="name" 
+											data-reg="^[A-ЯЁ][а-яё]*$"
+										/>
+										<label for="name">Username</label>
 										<span>Username</span>
 									</div>
 									<div class="input__container">
-										<input type="email" class="input">
-										<label for="">Email</label>
+										<input 
+											type="email" 
+											class="input"
+											id="email"
+											name="email"
+											data-reg="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$"
+										/>
+										<label for="email">Email</label>
 										<span>Email</span>
 									</div>
 									<div class="input__container">
-										<input type="tel" class="input">
-										<label for="">Phone</label>
+										<input 
+											type="text" 
+											class="input"
+											id="phone"
+											name="phone"
+											data-reg="^((\+7|7|8+([0-9]){10})$"
+										/>
+										<label for="phone">Format: +79000000000, 79000000000, 89000000000</label>
+										<!-- <label for="phone">Phone</label> -->
 										<span>Phone</span>
 									</div>
 									<div class="input__container textarea">
@@ -972,9 +997,6 @@
 
 		<!--===================== MIXTUP FILTER =====================-->
 		<script src="./js/mixitup.min.js"></script>
-
-		<!--===================== THEME =====================-->
-
 
 		<!--===================== SCROLL UP =====================-->
 		<a href="#" class="scrollup" id="scroll-up">
